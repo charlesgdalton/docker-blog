@@ -6,4 +6,10 @@ services:
     ports:
       - '80:80'
   blog:
-    image: httpd:2.4.46
+    image: ghost:alpine
+    volumes:
+      - ghost-data:/var/lib/ghost/content
+
+
+volumes:
+  ghost-data:
